@@ -10,11 +10,11 @@ int main(int argc, char* argv[])
         username = argv[2];
         reponame = argv[3];
 
-        if (strcmp(argv[1], "https"))
+        if (strcmp(argv[1], "https") == 0)
         {
             gitstring = "git clone https://github.com/" + username + "/" + reponame + ".git";
         }
-        else if (strcmp(argv[1], "ssh"))
+        else if (strcmp(argv[1], "ssh") == 0)
         {
             gitstring = "git clone git@github.com:" + username + "/" + reponame + ".git";
         }
