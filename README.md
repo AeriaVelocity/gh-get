@@ -2,6 +2,8 @@
 Makes cloning from a GitHub repo literally as easy as 1, 2, 3.
 Basically a wrapper for `git clone`.
 
+> This was originally a C++ program that I manually converted to C.
+
 ### Usage
 ```
 gh-get https|ssh username repo
