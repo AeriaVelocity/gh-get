@@ -15,9 +15,9 @@ This is a C program that was originally written in C++ and manually converted to
 int main(int argc, char* argv[])
 {
     /* Variable initialisation */
-    char gitstring[100];
-    char username[25];
-    char reponame[50];
+    char gitstring[140] = "";
+    char username[25] = "";
+    char reponame[50] = "";
 
     /* Checking if the correct amount of arguments is supplied */
     if (argc >= 4)
