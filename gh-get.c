@@ -15,7 +15,7 @@ This is a C program that was originally written in C++ and manually converted to
 int main(int argc, char* argv[])
 {
     /* Variable initialisation */
-    char gitstring[140];
+    char gitstring[100];
     char username[25];
     char reponame[50];
 
