@@ -18,17 +18,19 @@ int main(int argc, char* argv[])
     char gitstring[140] = "";
     char username[25] = "";
     char reponame[50] = "";
+    char destination[50] = "";
 
     /* Checking if the correct amount of arguments is supplied */
-    if (argc >= 4)
+    if (argc >= 3)
     {
-        /* Store arguments to variables */
-        strcat(username, argv[2]);
-        strcat(reponame, argv[3]);
-
         if (strcmp(argv[1], "https") == 0)
         /* If the user chose HTTPS mode */
         {
+            /* Store arguments to variables */
+            strcat(username, argv[2]);
+            strcat(reponame, argv[3]);
+            if (argc > 3) { strcat(destination, argv[4]); }
+
             /* Form the full git clone string (https) */
             strcat(gitstring, "git clone https://github.com/");
             strcat(gitstring, username);
@@ -38,6 +40,11 @@ int main(int argc, char* argv[])
         else if (strcmp(argv[1], "ssh") == 0)
         /* If the user chose SSH mode */
         {
+            /* Store arguments to variables */
+            strcat(username, argv[2]);
+            strcat(reponame, argv[3]);
+            if (argc > 3) { strcat(destination, argv[4]); }
+            
             /* Form the full git clone string (ssh) */
             strcat(gitstring, "git clone git@github.com:");
             strcat(gitstring, username);
@@ -46,9 +53,20 @@ int main(int argc, char* argv[])
         }
         else
         {
-            /* If the user typed something other than https or ssh */
-            printf("%s is invalid - use https or ssh", argv[1]);
-            exit(1);
+            /* If the user typed something other than https or ssh, https will be used instead */
+            
+            /* Store arguments to variables */
+            strcat(username, argv[1]);
+            strcat(reponame, argv[2]);
+            if (argc > 2) { strcat(destination, argv[3]); }
+
+            /* Form the full git clone string (https) */
+            strcat(gitstring, "git clone https://github.com/");
+            strcat(gitstring, username);
+            strcat(gitstring, "/");
+            strcat(gitstring, reponame);
+            if (argc > 2) { strcat(gitstring, " "); strcat(gitstring, destination); }
+            
         }
         /* Run the git clone command */
         system(gitstring);
