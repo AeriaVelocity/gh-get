@@ -15,19 +15,13 @@ And you're done! You can go ahead and `cp` it to `/usr/local/bin/` or wherever e
 
 ### Using gh-get
 ```
-gh-get [https|ssh] <username> <repo> [destination]
+gh-get <username> <repo> [destination]
 ```
-If neither `https` nor `ssh` are specified, `gh-get` will use HTTPS by default.
+`gh-get` always uses HTTPS.
 
 ### Examples
 ```
 > gh-get that1m8head gh-get
-```
-```
-> gh-get https id-Software DOOM
-```
-```
-> gh-get ssh Rick-Lang rickroll-lang
 ```
 ```
 > gh-get thiderman doge ~/doge
