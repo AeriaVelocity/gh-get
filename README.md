@@ -1,8 +1,5 @@
 # gh-get
-Makes cloning from a GitHub repo literally as easy as 1, 2, 3.
-Basically a wrapper for `git clone`.
-
-> This was originally a C++ program that I manually converted to C.
+A `git clone` wrapper that makes it simple to clone any GitHub repository.
 
 ### Building
 Clone the repo (unfortunately you can't use `gh-get` to download `gh-get` if you don't have it yet):
@@ -12,21 +9,26 @@ Clone the repo (unfortunately you can't use `gh-get` to download `gh-get` if you
 ```
 Use your favourite C compiler to compile it:
 ```
-> tcc gh-get.c
+> gcc -o gh-get gh-get.c
 ```
-And you're done! You can go ahead and copy it to `/usr/local/bin/` or wherever else you want.
+And you're done! You can go ahead and `cp` it to `/usr/local/bin/` or wherever else you want.
 
-### Usage
+### Using gh-get
 ```
-gh-get https|ssh username repo
+gh-get (https|ssh) <username> <repo> [destination]
 ```
+If neither `https` nor `ssh` are specified, `gh-get` will use HTTPS by default.
 
-### Example
-#### HTTPS
+### Examples
+```
+> gh-get that1m8head gh-get
+```
 ```
 > gh-get https id-Software DOOM
 ```
-#### SSH
 ```
-> gh-get ssh That1M8Head DOOM-8
+> gh-get ssh Rick-Lang rickroll-lang
+```
+```
+> gh-get thiderman doge ~/doge
 ```
