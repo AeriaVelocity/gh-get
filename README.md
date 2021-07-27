@@ -15,7 +15,7 @@ And you're done! You can go ahead and `cp` it to `/usr/local/bin/` or wherever e
 
 ### Using gh-get
 ```
-gh-get (https|ssh) <username> <repo> [destination]
+gh-get [https|ssh] <username> <repo> [destination]
 ```
 If neither `https` nor `ssh` are specified, `gh-get` will use HTTPS by default.
 

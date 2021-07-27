@@ -75,7 +75,8 @@ int main(int argc, char* argv[])
     /* If there were not enough arguments */
     {
         /* Inform the user on proper command usage*/
-        printf("Usage: gh-get https|ssh username repo");
+        printf("Incorrect amount of arguments supplied.\n");
+        printf("Usage: gh-get [https|ssh] <username> <repo> [destination]\n");
     }
     return 0;
 }
