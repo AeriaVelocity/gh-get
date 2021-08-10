@@ -3,13 +3,14 @@ A `git clone` wrapper that makes it simple to clone any GitHub repository.
 
 ### Building
 Clone the repo (unfortunately you can't use `gh-get` to download `gh-get` if you don't have it yet):
-```
+```bash
 > git clone https://github.com/That1M8Head/gh-get
 > cd gh-get
 ```
-Use your favourite C compiler to compile it:
-```
-> gcc -o gh-get gh-get.c
+Compile it and install by `make`ing and `make install`ing:
+```bash
+> make
+> make install # You may need to run this with sudo
 ```
 And you're done! You can go ahead and `cp` it to `/usr/local/bin/` or wherever else you want.
 
