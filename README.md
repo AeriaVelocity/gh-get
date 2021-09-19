@@ -1,6 +1,9 @@
 # gh-get
 A `git clone` wrapper that makes it simple to clone any GitHub repository.
 
+Go to [releases](https://github.com/That1M8Head/gh-get/releases) for a Windows executable.
+<br>(This is pre-built because Windows systems often do not have `gcc` or `make`)
+
 ### Building
 Clone the repo (unfortunately you can't use `gh-get` to download `gh-get` if you don't have it yet):
 ```bash
