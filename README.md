@@ -1,6 +1,8 @@
 # gh-get
 A `git clone` wrapper that makes it simple to clone any GitHub repository.
 
+Need more than just GitHub support? Try the [`simplegit`](https://github.com/Otus9051/simplegit) fork.
+
 Go to [releases](https://github.com/That1M8Head/gh-get/releases) for a Windows executable.
 <br>(This is pre-built because Windows systems often do not have `gcc` or `make`)
 
