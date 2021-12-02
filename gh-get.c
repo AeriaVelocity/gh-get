@@ -44,6 +44,7 @@ int main(int argc, char* argv[])
         strcat(gitstring, reponame);
         strcat(gitstring, " ");
         strcat(gitstring, destination);
+        strcat(gitstring, ".git");
 
         /* Run the git clone command */
         // printf("%s\n", gitstring); // for debugging
