@@ -1,5 +1,5 @@
 gh-get:
-	gcc -o gh-get gh-get.c -Wall
+	gcc -o gh-get main.c -Wall
 install:
 	cp gh-get /usr/local/bin/
 hello:
